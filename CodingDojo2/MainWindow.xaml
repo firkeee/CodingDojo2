@@ -5,8 +5,98 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CodingDojo2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="370" Width="525" Margin="0" BorderThickness="0" Background="Black">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="80"/>
+        </Grid.ColumnDefinitions>
+        <Border BorderBrush="White" BorderThickness="2" Width="0.5" HorizontalAlignment="Right"></Border>
+       <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Red" BorderThickness="0.5" Margin="10,5,10,0" Height="20" VerticalAlignment="Center" Opacity="0.7">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Warning-WF.png" Width="20" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Label Content="Überlauf Grauwasser" Background="{x:Null}" Foreground="White" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" Padding="1" FontSize="10"/>
+                </StackPanel>
+            </Border>
+            <Label Grid.Row="1" Content="...tbd..." Foreground="#FFFEFEFE" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" />
+        </Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="75*"/>
+                <RowDefinition Height="50*"/>
+                <RowDefinition Height="150*"/>
+                <RowDefinition Height="35*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" Orientation="Vertical" Margin="5,3">
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Cloud sun02-WF.png"  Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="20°" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Wind.png" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="12 km/h" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Border Opacity="0.7" Margin="5,0" Grid.Row="0" BorderBrush="White" BorderThickness="0.3" VerticalAlignment="Bottom"></Border>
+            
+            <StackPanel Grid.Row="1" Orientation="Vertical" Margin="5,3">
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Solar.png"  Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="3.545 W" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Man-01.png" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="0" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Lock-WF.png" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="OK" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Border Opacity="0.7" Margin="5,0" Grid.Row="1" BorderBrush="White" BorderThickness="0.3" VerticalAlignment="Bottom"></Border>
+
+            <StackPanel Grid.Row="2" Orientation="Vertical" Margin="5,3">
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Message Mail-WF.png"  Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="7" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Height="20">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Tasks.png" Width="25" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Width="45" Content="4" Foreground="White" Padding="0" Background="{x:Null}" VerticalAlignment="Center" VerticalContentAlignment="Center" FontSize="10"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Border Opacity="0.7" Margin="5,0" Grid.Row="2" BorderBrush="White" BorderThickness="0.3" VerticalAlignment="Bottom"></Border>
+
+            <StackPanel Grid.Row="3" Orientation="Vertical" Margin="10,2">
+                <Button Content="Übersicht" Height="18" Margin="2" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="10"/>
+                <Button Content="Räume" Height="18" Margin="2" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="10"/>
+                <Button Content="Geräte" Height="18" Margin="2" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="10"/>
+                <Button Content="Gebäude" Height="18" Margin="2" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="10"/>
+                <Button Content="Sicherheit" Height="18" Margin="2" BorderBrush="White" Background="{x:Null}" Foreground="White" FontSize="10"/>
+                <Button Content="Multimedia" Height="18" Margin="2" BorderBrush="White" Foreground="White" FontSize="10" Background="{x:Null}"/>
+            </StackPanel>
+
+            <Border Opacity="0.7" Margin="5,0" Grid.Row="3" BorderBrush="White" BorderThickness="0.3" VerticalAlignment="Bottom"></Border>
+
+            <StackPanel Grid.Row="4" Orientation="Vertical" Margin="10,2">
+                <StackPanel Orientation="Horizontal" Height="15">
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Bell New-WF.png" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Speaker Decrease - 01.png" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    <Label Foreground="White" Height="18" Width="10" Background="{x:Null}" HorizontalAlignment="Center" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Center" FontSize="8" Padding="0">4</Label>
+                    <Image Source="c:\users\filip\source\repos\CodingDojo2\CodingDojo2\Images\Speaker Increase - 02.png" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                </StackPanel>
+                <Label Foreground="White" Content="12:34" Height="15" Width="80" HorizontalContentAlignment="Center" HorizontalAlignment="Center" VerticalAlignment="Bottom" VerticalContentAlignment="Bottom" FontSize="8" Padding="0" Opacity="0.7"/>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>
